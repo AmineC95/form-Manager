@@ -1,0 +1,70 @@
+{
+  "form": {
+    "name": "contact",
+    "fields": [
+      {
+        "name": "lastname",
+        "label": "Nom",
+        "type": "text",
+        "constraints": {
+          "required": 1,
+          "alphanumeric": 1,
+          "length": {
+            "min": 4,
+            "max": 8
+          }
+        }
+      },
+      {
+        "name": "firstname",
+        "label": "Prénom",
+        "type": "text"
+      },
+      {
+        "name": "email",
+        "label": "Adresse e-mail",
+        "type": "email"
+      },
+      {
+        "name": "subject",
+        "label": "Sujet",
+        "type": "select",
+        "constraints": {
+          "required": 1
+        },
+        "values": [
+          {
+            "text": "Question générale",
+            "value": "question"
+          },
+          {
+            "text": "Réclamation",
+            "value": "claim"
+          },
+          {
+            "text": "Autre",
+            "value": "other"
+          }
+        ]
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea"
+      },
+      {
+        "name": "cgu",
+        "label": "J'accepte les conditions générales",
+        "type": "checkbox",
+        "constraints": {
+          "required": 1
+        }
+      },
+      {
+        "name": "submit",
+        "type": "submit",
+        "text": "Envoyer"
+      }
+    ]
+  }
+}
